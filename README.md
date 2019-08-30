@@ -2,4 +2,4 @@
 
 > provide some chrome extension template
 
-![Vue.js Chrome Extension Template images](/docs/images/chrome.png)
+![Vue.js Chrome Extension Template images](/docs/images/mini.png)
