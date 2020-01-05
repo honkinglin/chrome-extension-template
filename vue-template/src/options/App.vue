@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <img src="../assets/logo.svg" width="200">
+    <img
+      width="200"
+      src="../assets/logo.svg"
+    >
     <h1>{{ msg }}</h1>
   </div>
 </template>

@@ -1,16 +1,15 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const ChromeReloadPlugin = require('lin-wcer')
 const { resolve, page, assetsPath } = require('./util')
 
 module.exports = {
     entry: {
         popup: resolve('src/popup'),
         options: resolve('src/options'),
-        content: resolve('src/content'),
+        content: resolve('src/content/index.js'),
+        page: resolve('src/content/page.js'),
         background: resolve('src/background'),
-        inject: resolve('src/content/inject'),
     },
     output: {
         path: resolve('plugin'),
@@ -109,9 +108,5 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
         }),
-        new ChromeReloadPlugin({
-            port: 23333,
-            manifest: resolve('src/manifest.js')
-        })
     ],
 }

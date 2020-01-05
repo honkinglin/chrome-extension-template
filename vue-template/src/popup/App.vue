@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img src="../assets/logo.svg" width="200">
+    <img
+      src="../assets/logo.svg"
+      width="200"
+    >
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
+import event from '@/common/event'
+
 export default {
   name: 'App',
   data () {
     return {
-      msg: 'This is popup page!'
+      msg: 'This is popup page!!!!!'
     }
+  },
+  created () {
+    event.$emit('sync-page', null, true).then((data) => {
+      console.log('sync-page', data)
+    })
   }
 }
 </script>

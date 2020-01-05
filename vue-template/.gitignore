@@ -5,6 +5,7 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 yarn-lock.json
+plugin/
 
 # Editor directories and files
 .idea
@@ -12,3 +13,7 @@ yarn-lock.json
 *.ntvs*
 *.njsproj
 *.sln
+*.crx
+*.zip
+*.xml
+*.pem
